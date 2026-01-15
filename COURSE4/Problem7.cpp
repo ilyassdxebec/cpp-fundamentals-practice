@@ -1,19 +1,18 @@
 #include<iostream>
 using namespace std;
-float TakeInput(){
-    float N;
-    cout<<"Please Enter a number: ";
-    cin>>N;
-    return N;
-}
- float Operation(float N){
-
-  float num =N/2;
+int TakeNumber(){
+   int num;
+   cout<<"Enter your number: ";
+   cin>>num;
    return num;
- }
- void Result(float num){
-    cout<<"\nYour result is: "<<num;
- }
+}
+float DoOperation(int num){
+  return (float) num/2;
+}
+void PrintResult(int num){
+  string result = "\nHalf of "+ to_string(num)+" is "+to_string(DoOperation(num));
+  cout<<result;
+}
 int main(){
-   Result(Operation(TakeInput()));
+   PrintResult(TakeNumber());
 }
