@@ -1,23 +1,23 @@
 #include<iostream>
 using namespace std;
-int GetNumber(){
+int EnterPositiveNumber(string message){
     int N;
-    cout<<"Enter a number: ";
-    cin>>N;
+    do{
+         cout<<message<<endl;
+         cin>>N;
+    }while(N<0);
+
     return N;
 }
- int FactorialofNumber(int N){
+ int FactorialofN(int N){
     int factorial=1;
-    for(int i=N;i>=1;i--){
-      factorial*=i;
-    }
-    return factorial;
+     for(int i=N;i>=1;i--){
+        factorial*=i;
+     }
+     return factorial;
  }
- void PrintFactorialOfNumber(int N){
-    cout<<"\nFactorial of the number: "<<N<<" is "<<FactorialofNumber(N);
- }
- int main(){
-    int N=GetNumber();
-    PrintFactorialOfNumber(N);
 
+ int main(){
+ 
+       cout<<FactorialofN(EnterPositiveNumber("Please enter a positive Number: "));
  }
