@@ -1,9 +1,0 @@
-THIS FILE IS .gitignore SO IT'S NEVER PUSHED TO MY REPO ON GITHUB
-THESE ARE SOME COMMANDS TO USE EVERYDAY AFTER WORK TO PUSH 
-YOU CAN CHANGE THE MESSAGE BASED ON WHAT YOU WANT FOR THE DAY
-************************************
-    git add .
-    git commit -m "Going strong"
-    git push origin main
-
-************************************
