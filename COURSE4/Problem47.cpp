@@ -24,4 +24,4 @@ int main(){
  float LoanAmount = ReadLoanAmount("Please enter loan amount: ");
  float MonthlyPayment = ReadMonthlyPayment("Please enter your monthly payment: ");
  cout<<"You need to be paying for "<<CalculateNumberOfMonths(LoanAmount,MonthlyPayment)<<" Months";
-}   
+} 
