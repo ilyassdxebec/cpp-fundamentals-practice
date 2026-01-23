@@ -9,6 +9,7 @@ int ReadPositiveNumber(string message){
     } while(number <= 0);
     return number;
 }
+
 bool CheckIsPerfect(int number){
   int sum=0;
   for(int i=1;i<number;i++){
@@ -18,10 +19,13 @@ bool CheckIsPerfect(int number){
   }
   return sum==number;
 }
-void PrintResult(int number){
-  if(CheckIsPerfect(number)) cout<<endl<<number<<" is perfect";
-  else cout<<endl<<number<<" is not perfect";
+
+void PrintAllPerfectNumbers(int number){
+  for(int i=1;i<=number;i++){
+    if(CheckIsPerfect(i)) cout<<i<<"\n";
+  }
 }
+
 int main(){
-  PrintResult(ReadPositiveNumber("Please enter a number and we'll check if it's perfect or not: "));
+  PrintAllPerfectNumbers(ReadPositiveNumber("enter a positive number and we'll give you all perfect numbers less than it: "));
 }
