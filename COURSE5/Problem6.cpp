@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<string>
 using namespace std;
 
 int ReadPositiveNumber(string message){
@@ -10,16 +10,17 @@ int ReadPositiveNumber(string message){
     } while(number <= 0);
     return number;
 }
-int ReverseNumber(int number){
-    int reversed=0,remainder;
+int CalculateSumOfDigits(int number){
+    int remainder,sum=0;
    while(number>0){
      remainder = number%10;
-     reversed = reversed*10+remainder;
+     sum+=remainder;
      number /= 10;
    }
-   return reversed;
+   return sum;
 }
 int main(){
-    int reversed =ReverseNumber(ReadPositiveNumber("Please enter a number: "));
-    cout<<"Reverse is: "<<reversed;
+    
+      int sum = CalculateSumOfDigits(ReadPositiveNumber("Please enter a number:"));
+    cout << endl << "Sum of digits = " << sum;
 }
