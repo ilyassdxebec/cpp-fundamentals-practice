@@ -12,7 +12,7 @@ int ReadPositiveNumber(string message){
 }
 int ReverseNumber(int number){
     int reversed=0,remainder;
-   while(number>0){
+   while(number>0){     
      remainder = number%10;
      reversed = reversed*10+remainder;
      number /= 10;
