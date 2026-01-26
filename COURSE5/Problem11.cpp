@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int ReadPositiveNumber(string message){
     int number;
     do{
@@ -17,16 +18,12 @@ int ReverseNumber(int number){
    }
    return reversed;
 }
-void PrintDigitsInOrder(int reversed){
-    int remainder=0;
-    while(reversed>0){
-      remainder=reversed%10;
-      cout<<endl<<remainder;
-      reversed=reversed/10;
-    }
+bool isPalindromeNumber(int number){
+    return (number==ReverseNumber(number));
 }
 
 int main(){
- 
-  PrintDigitsInOrder(ReverseNumber(ReadPositiveNumber("Please enter a number: ")));
+  if(isPalindromeNumber(ReadPositiveNumber("Please enter a positive number: "))){
+     cout<<endl<<"Yes, it's a palindrome number!";
+  } else cout<<endl<<"No, it's not a palindrome number!";
 }
