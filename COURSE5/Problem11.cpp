@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//c
+
 int ReadPositiveNumber(string message){
     int number;
     do{
