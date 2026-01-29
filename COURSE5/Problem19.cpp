@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int RandomNumber(int from,int to){
   int RandomNumber = rand()%(to-from+1)+from;
   return RandomNumber;
@@ -9,4 +10,4 @@ int main(){
 
  cout<<RandomNumber(5,100)<<endl;
 
-}
+}   
