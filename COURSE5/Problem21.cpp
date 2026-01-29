@@ -38,7 +38,21 @@ string GenerateWord(enCharType CharType, short length){
     }
     return word;
 }
+string GenerateKey(){
+    string key = "";
+    key=key+GenerateWord(CapitalLetter,4)+"-";
+    key=key+GenerateWord(CapitalLetter,4)+"-";
+    key=key+GenerateWord(CapitalLetter,4)+"-";
+    key=key+GenerateWord(CapitalLetter,4);
+    return key;
+}
+void GenerateKeys(int number){
+  for(int i=1;i<=number;i++){
+    cout<<"Key["<<i<<"]: "<<GenerateKey()<<endl;
+  }
+}
 
 int main(){
-
+    srand((unsigned)time(NULL));
+  GenerateKeys(ReadPositiveNumber("please enter number of keys to generate: "));
 }
