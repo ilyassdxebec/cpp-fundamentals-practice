@@ -33,11 +33,18 @@ void PrintArray(int arr[100], int arrLength){
         cout << arr[i] << " ";
     cout << "\n";
 }
-
+ int SumOfArrayElements(int arr[],int arrLength){
+   int sum=0;
+   for(int i=0;i<arrLength;i++){
+    sum+=arr[i];
+   }
+   return sum;
+ }
 int main(){
  srand((unsigned)time(NULL));
 
  int arrLength,arr[100];
  RandomArrayFilling(arr,arrLength);
  PrintArray(arr,arrLength);
+ cout<<"\n Sum of all numbers is: "<<SumOfArrayElements(arr,arrLength);
 }

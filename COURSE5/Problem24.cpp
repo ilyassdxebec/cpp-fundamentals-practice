@@ -33,11 +33,18 @@ void PrintArray(int arr[100], int arrLength){
         cout << arr[i] << " ";
     cout << "\n";
 }
-
+ int ArrayMaxNumber(int arr[],int arrLength){
+    int max=arr[0];
+    for(int i=0;i<arrLength;i++){
+        if(arr[i]>max) max = arr[i];
+    }
+    return max;
+ }
 int main(){
  srand((unsigned)time(NULL));
 
  int arrLength,arr[100];
  RandomArrayFilling(arr,arrLength);
  PrintArray(arr,arrLength);
+ cout<<"\n Max Number is: "<<ArrayMaxNumber(arr,arrLength);
 }

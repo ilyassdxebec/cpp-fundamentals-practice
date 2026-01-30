@@ -33,11 +33,18 @@ void PrintArray(int arr[100], int arrLength){
         cout << arr[i] << " ";
     cout << "\n";
 }
-
+ int ArrayMinNumber(int arr[],int arrLength){
+    int min=arr[0];
+    for(int i=0;i<arrLength;i++){
+        if(arr[i]<min) min = arr[i];
+    }
+    return min;
+ }
 int main(){
  srand((unsigned)time(NULL));
 
  int arrLength,arr[100];
  RandomArrayFilling(arr,arrLength);
  PrintArray(arr,arrLength);
+ cout<<"\n Min Number is: "<<ArrayMinNumber(arr,arrLength);
 }
